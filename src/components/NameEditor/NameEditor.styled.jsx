@@ -1,17 +1,73 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
 
 export const ContactForm = styled.form`
-  // стилі для форми
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+`;
+
+export const LabelName = styled.label`
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+`;
+
+export const LabelPhone = styled.label`
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
 `;
 
 export const NameInput = styled.input`
-  // стилі для поля вводу імені
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+
+    &:focus {
+        outline: none;
+        border-color: #0088cc;
+    }
+
+    &:invalid {
+        border-color: #e74c3c;
+    }
 `;
 
 export const NumberInput = styled.input`
-  // стилі для поля вводу номеру телефону
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+
+    &:focus {
+        outline: none;
+        border-color: #0088cc;
+    }
+
+    &:invalid {
+        border-color: #e74c3c;
+    }
 `;
 
 export const AddContactButton = styled.button`
-  // стилі для кнопки додавання контакту
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #0088cc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+        background-color: #006699;
+    }
 `;

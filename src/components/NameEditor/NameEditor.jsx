@@ -4,6 +4,8 @@ import {
     NameInput,
     NumberInput,
     AddContactButton,
+    LabelName,
+    LabelPhone,
 } from './NameEditor.styled';
 import PropTypes from 'prop-types';
 class NameEditor extends Component {
@@ -45,6 +47,7 @@ class NameEditor extends Component {
     render() {
         return (
             <ContactForm onSubmit={this.handleSubmit}>
+                <LabelName htmlFor="name">Name:</LabelName>
                 <NameInput
                     type="text"
                     name="name"
@@ -54,6 +57,7 @@ class NameEditor extends Component {
                     title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                     required
                 />
+                <LabelPhone htmlFor="number">Phone Number:</LabelPhone>
                 <NumberInput
                     type="tel"
                     name="number"
