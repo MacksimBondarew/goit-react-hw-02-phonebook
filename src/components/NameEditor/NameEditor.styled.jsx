@@ -9,11 +9,13 @@ export const ContactForm = styled.form`
     margin-bottom: 20px;
 `;
 
+
 export const LabelName = styled.label`
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
+    text-align: center;
 `;
 
 export const LabelPhone = styled.label`
@@ -21,6 +23,7 @@ export const LabelPhone = styled.label`
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
+    text-align: center;
 `;
 
 export const NameInput = styled.input`
