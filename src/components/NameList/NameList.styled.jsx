@@ -52,11 +52,13 @@ export const ContactNameSpan = styled.span`
     font-size: 16px;
     font-weight: bold;
     color: #333;
+    margin: auto 0;
 `;
 
 export const ContactNumberSpan = styled.span`
     font-size: 14px;
     color: #666;
+    margin: auto 0;
 `;
 
 const svgAnimation = keyframes`
