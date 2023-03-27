@@ -1,31 +1,32 @@
 import PropTypes from 'prop-types';
-import {
-    ContactsList,
-    ContactItem,
-    ContactNameSpan,
-    ContactNumberSpan,
-    RemoveContact,
-} from './NameList.styled';
+import { ContactsList } from './NameList.styled';
+import ContactName from '../ContactName/ContactName';
 
 const NameList = ({ contacts, deleteName }) => {
     return (
         <ContactsList>
             {contacts.map(({ id, name, number }) => (
-                <ContactItem key={id}>
-                    <ContactNameSpan>{name}</ContactNameSpan>
-                    <ContactNumberSpan>{number}</ContactNumberSpan>
-                    <RemoveContact type="button" onClick={() => deleteName(id)}>
-                        Видалити
-                    </RemoveContact>
-                </ContactItem>
+                <ContactName
+                    key={id}
+                    id={id}
+                    name={name}
+                    number={number}
+                    deleteName={deleteName}
+                />
             ))}
         </ContactsList>
     );
 };
 
 NameList.propTypes = {
-    contacts: PropTypes.array.isRequired,
     deleteName: PropTypes.func.isRequired,
+    contacts: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            number: PropTypes.string.isRequired,
+        }).isRequired
+    ).isRequired,
 };
 
 export default NameList;
