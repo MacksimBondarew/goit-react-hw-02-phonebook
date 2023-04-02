@@ -1,5 +1,4 @@
 import {
-    ContactItem,
     ContactNameSpan,
     ContactNumberSpan,
     RemoveContact,
@@ -8,13 +7,13 @@ import PropTypes from 'prop-types';
 
 const ContactName = ({ id, name, number, deleteName }) => {
     return (
-        <ContactItem key={id}>
+        <>
             <ContactNameSpan>{name}</ContactNameSpan>
             <ContactNumberSpan>{number}</ContactNumberSpan>
             <RemoveContact type="button" onClick={() => deleteName(id)}>
                 Видалити
             </RemoveContact>
-        </ContactItem>
+        </>
     );
 };
 ContactName.propTypes = {
